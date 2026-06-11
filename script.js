@@ -273,23 +273,23 @@ document.addEventListener("DOMContentLoaded", () => {
     const textos = {
         modal1: {
             titulo: "Como Nos Conhecemos",
-            texto: "Escreva aqui a história completa de como vocês se conheceram."
+            texto: "Apesar de termos nos conhecido de uma forma um tanto inusitada, eu jamais me arrependi de ter tomado a iniciativa de te chamar para conversar. Pelo contrário, foi uma das melhores decisões que já tomei. A cada dia que passa, sou mais feliz ao seu lado, e meu carinho por você só cresce. Você tornou meus dias mais leves, mais bonitos e muito mais especiais. ❤️"
         },
         modal2: {
             titulo: "Primeiro Encontro",
-            texto: "Escreva aqui os detalhes do primeiro encontro."
+            texto: "O nosso primeiro encontro, apesar de ter demorado para acontecer, foi simplesmente incrível. Eu me lembro dele como se tivesse sido ontem. Até hoje guardo na memória aquela noite em que, tomado por uma mistura de emoções e saudade, decidi que precisava te ver. Foi uma decisão impulsiva, mas uma das melhores que já tomei. Desde o momento em que te encontrei, percebi que cada minuto de espera tinha valido a pena. Aquele encontro não foi apenas um momento especial, foi uma lembrança que carrego com muito carinho no coração. ❤️✨"
         },
         modal3: {
             titulo: "Primeiro Beijo",
-            texto: "Escreva aqui a história do primeiro beijo."
+            texto: "O nosso primeiro beijo veio junto com toda a emoção de finalmente te ver, te abraçar e sentir o seu cheirinho tão de perto. Confesso que também havia um pouco de medo e nervosismo, mas naquele momento tudo aconteceu de forma tão natural que parecia inevitável. Foi quase automático, como se o meu coração tivesse tomado a decisão antes mesmo de mim. E o que tornou aquele instante ainda mais especial foi perceber que você também correspondeu. Aquele beijo não foi apenas um beijo; foi a confirmação de um sentimento que já estava crescendo dentro de mim e que, desde então, só ficou mais forte. ❤️✨"
         },
         modal4: {
             titulo: "Nossas Aventuras",
-            texto: "Escreva aqui as viagens e momentos especiais."
+            texto: "Desde então, sempre procuro encontrar um espaço na minha rotina para você, porque estar ao seu lado se tornou uma das partes mais especiais dos meus dias. Eu amo cada momento que passamos juntos, cada conversa, cada abraço e cada sorriso compartilhado. Cada saída nossa é uma nova descoberta, uma coleção de emoções e lembranças que guardo com muito carinho no coração."
         },
         modal5: {
             titulo: "Hoje e Para Sempre",
-            texto: "Escreva aqui sua mensagem especial."
+            texto: "Este é o nosso primeiro Dia dos Namorados juntos, e eu estou muito feliz por compartilhar esse momento com você. Mas a verdade é que não quero dividir apenas este dia ao seu lado, quero dividir todos os próximos também.Feliz Dia dos Namorados, meu amor. Que este seja apenas o primeiro de muitos que ainda viveremos juntos. ❤️✨"
         }
     };
 
