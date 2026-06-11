@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Para Você ❤️</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Sacramento&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+</head>
+<body>
+
+<!-- ═══════════════════════ CANVAS DE PARTÍCULAS ═══════════════════════ -->
+<canvas id="heartCanvas"></canvas>
+
+<!-- ═══════════════════════ TELA INICIAL ═══════════════════════ -->
+<section id="splash" class="section-full splash-screen">
+  <div class="splash-inner">
+    <div class="splash-glow"></div>
+    <div class="splash-content">
+      <p class="splash-subtitle animate-fade-up">Para a pessoa mais especial do mundo</p>
+      <h1 class="splash-name animate-fade-up delay-1">Meu Amor ❤️</h1>
+      <p class="splash-phrase animate-fade-up delay-2">
+        "Este site foi criado especialmente para a pessoa<br>mais importante da minha vida, JUJU❤️"
+      </p>
+      <button class="btn-enter animate-fade-up delay-3" id="btnEnter">
+        <span>Entrar na nossa história</span>
+        <i class="fas fa-heart btn-icon"></i>
+      </button>
+    </div>
+    <div class="splash-petals" id="splashPetals"></div>
+  </div>
+</section>
+
+<!-- ═══════════════════════ NAVBAR ═══════════════════════ -->
+<nav class="navbar hidden" id="navbar">
+  <div class="nav-logo"><i class="fas fa-heart"></i> Nossa História</div>
+  <div class="nav-links">
+    <a href="#timeline" class="nav-link">💫 História</a>
+    <a href="#counter" class="nav-link">⏱️ Contador</a>
+    <a href="#gallery" class="nav-link">📸 Galeria</a>
+    <a href="#letters" class="nav-link">💌 Cartas</a>
+    <a href="#reasons" class="nav-link">💖 Motivos</a>
+    <a href="#proposal" class="nav-link">💍 Pedido</a>
+  </div>
+  <button class="btn-romantic-mode" id="btnRomanticMode" title="Modo Romântico Máximo">
+    <i class="fas fa-fire-flame-curved"></i>
+  </button>
+</nav>
+
+<!-- ═══════════════════════ NOSSA HISTÓRIA - TIMELINE ═══════════════════════ -->
+<section id="timeline" class="section hidden">
+  <div class="section-header">
+    <h2 class="section-title">Nossa História</h2>
+    <p class="section-sub">Cada capítulo, uma eternidade</p>
+  </div>
+  <div class="timeline-container">
+
+    <div class="timeline-item left reveal">
+      <div class="timeline-dot"><i class="fas fa-star"></i></div>
+      <div class="timeline-card glass" data-modal="modal1">
+        <div class="timeline-date">O Começo</div>
+        <div class="timeline-img-wrap">
+          <img src="https://drive.google.com/thumbnail?id=12Mdqar9Gen3St3bO4vhUWTO_150Gwzs9&w=1000" alt="Como nos conhecemos">
+          <div class="timeline-overlay"><i class="fas fa-expand"></i></div>
+        </div>
+        <h3>Como Nos Conhecemos</h3>
+        <p>O destino conspirou para nos unir. Aquele momento mudou tudo para sempre...</p>
+        <button class="btn-details">Ver mais ✨</button>
+      </div>
+    </div>
+
+    <div class="timeline-item right reveal">
+      <div class="timeline-dot"><i class="fas fa-heart"></i></div>
+      <div class="timeline-card glass" data-modal="modal2">
+        <div class="timeline-date">Primeiro Encontro</div>
+        <div class="timeline-img-wrap">
+          <img src="https://drive.google.com/thumbnail?id=1YKDckXDUnkdeDJplw6-5XY9zf7q6pnag&w=1000" alt="Primeiro encontro"/>
+          <div class="timeline-overlay"><i class="fas fa-expand"></i></div>
+        </div>
+        <h3>Nosso Primeiro Encontro</h3>
+        <p>Nervoso, ansioso, mas com um sorriso que não conseguia esconder...</p>
+        <button class="btn-details">Ver mais ✨</button>
+      </div>
+    </div>
+
+    <div class="timeline-item left reveal">
+      <div class="timeline-dot"><i class="fas fa-kiss-wink-heart"></i></div>
+      <div class="timeline-card glass" data-modal="modal3">
+        <div class="timeline-date">O Primeiro Beijo</div>
+        <div class="timeline-img-wrap">
+          <img src="https://drive.google.com/thumbnail?id=1IkhKLLbNH0DbCkwYSQb3cNHeeZ1P9nbP&w=1000" alt="Primeiro beijo"/>
+          <div class="timeline-overlay"><i class="fas fa-expand"></i></div>
+        </div>
+        <h3>Nosso Primeiro Beijo</h3>
+        <p>Um momento que ficou gravado para sempre na memória do meu coração...</p>
+        <button class="btn-details">Ver mais ✨</button>
+      </div>
+    </div>
+
+    <div class="timeline-item right reveal">
+      <div class="timeline-dot"><i class="fas fa-plane"></i></div>
+      <div class="timeline-card glass" data-modal="modal4">
+        <div class="timeline-date">Aventuras Juntos</div>
+        <div class="timeline-img-wrap">
+          <img src="https://drive.google.com/thumbnail?id=1L49V3I2SRPHijHUuTd4_ulFiLJMM3U-F&w=1000"  alt="Viagens"/>
+          <div class="timeline-overlay"><i class="fas fa-expand"></i></div>
+        </div>
+        <h3>Nossas Aventuras</h3>
+        <p>Cada lugar visitado, uma nova memória construída ao seu lado...</p>
+        <button class="btn-details">Ver mais ✨</button>
+      </div>
+    </div>
+    
+    
+    
+    <div class="timeline-item left reveal">
+      <div class="timeline-dot"><i class="fas fa-infinity"></i></div>
+      <div class="timeline-card glass" data-modal="modal5">
+        <div class="timeline-date">Hoje e Sempre</div>
+        <div class="timeline-img-wrap">
+          <img src="https://drive.google.com/thumbnail?id=1bD1V6ayG2Eqj0DV3wV_-jr4jf5l42l2U&w=1000" alt="Hoje"/>
+          <div class="timeline-overlay"><i class="fas fa-expand"></i></div>
+        </div>
+        <h3>Hoje e Para Sempre</h3>
+        <p>Cada dia ao seu lado é um presente. Obrigado por existir na minha vida...</p>
+        <button class="btn-details">Ver mais ✨</button>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+
+<div id="modalOverlay" class="modal-overlay" onclick="closeModal()"></div>
+
+<div id="modal1" class="timeline-modal">
+    <button onclick="closeModal()">✕</button>
+    <h2>Como Nos Conhecemos</h2>
+    <p>Seu texto completo aqui...</p>
+</div>
+
+<div id="modal2" class="timeline-modal">
+    <button onclick="closeModal()">✕</button>
+    <h2>Primeiro Encontro</h2>
+    <p>Seu texto completo aqui...</p>
+</div>
+
+<div id="modal3" class="timeline-modal">
+    <button onclick="closeModal()">✕</button>
+    <h2>Primeiro Beijo</h2>
+    <p>Seu texto completo aqui...</p>
+</div>
+
+<div id="modal4" class="timeline-modal">
+    <button onclick="closeModal()">✕</button>
+    <h2>Aventuras Juntos</h2>
+    <p>Seu texto completo aqui...</p>
+</div>
+
+<div id="modal5" class="timeline-modal">
+    <button onclick="closeModal()">✕</button>
+    <h2>Hoje e Sempre</h2>
+    <p>Seu texto completo aqui...</p>
+</div>
+
+
+
+
+
+
+
+<!-- ═══════════════════════ CONTADOR DE AMOR ═══════════════════════ -->
+<section id="counter" class="section hidden">
+  <div class="counter-bg">
+    <div class="section-header">
+      <h2 class="section-title light">Nosso Tempo Juntos</h2>
+      <p class="section-sub light">Cada segundo vale uma eternidade</p>
+    </div>
+    <div class="counter-grid reveal">
+      <div class="counter-box glass-dark">
+        <div class="counter-number" id="cDays">0</div>
+        <div class="counter-label">Dias</div>
+        <div class="counter-icon"><i class="fas fa-sun"></i></div>
+      </div>
+      <div class="counter-box glass-dark">
+        <div class="counter-number" id="cHours">0</div>
+        <div class="counter-label">Horas</div>
+        <div class="counter-icon"><i class="fas fa-moon"></i></div>
+      </div>
+      <div class="counter-box glass-dark">
+        <div class="counter-number" id="cMinutes">0</div>
+        <div class="counter-label">Minutos</div>
+        <div class="counter-icon"><i class="fas fa-star"></i></div>
+      </div>
+      <div class="counter-box glass-dark pulse-box">
+        <div class="counter-number" id="cSeconds">0</div>
+        <div class="counter-label">Segundos</div>
+        <div class="counter-icon"><i class="fas fa-heart"></i></div>
+      </div>
+    </div>
+    <p class="counter-phrase reveal">"Cada segundo ao seu lado vale uma vida inteira."</p>
+  </div>
+</section>
+
+<!-- ═══════════════════════ GALERIA ═══════════════════════ -->
+<section id="gallery" class="section hidden">
+
+    <div class="section-header">
+        <h2 class="section-title">Galeria de Memórias</h2>
+        <p class="section-sub">Nossos momentos mais preciosos</p>
+        
+    </div>
+
+    <div class="gallery-controls reveal">
+
+        
+        <button class="btn-slideshow" id="btnSlideshow">
+            <i class="fas fa-play"></i>
+            Slideshow
+        </button>
+
+    </div>
+
+    <!-- A galeria será preenchida pelo JS -->
+
+    <div class="gallery-masonry reveal" id="galleryGrid">
+
+    </div>
+
+</section>
+
+<!-- ═══════════════════════ CARTAS DE AMOR ═══════════════════════ -->
+<section id="letters" class="section hidden">
+  <div class="section-header">
+    <h2 class="section-title">Cartas de Amor</h2>
+    <p class="section-sub">Palavras direto do meu coração</p>
+  </div>
+  <div class="letters-grid reveal">
+
+    <div class="envelope-wrap">
+      <div class="envelope" onclick="openEnvelope(this)">
+        <div class="envelope-flap"></div>
+        <div class="envelope-body">
+          <div class="envelope-heart"><i class="fas fa-heart"></i></div>
+          <p class="envelope-hint">Clique para abrir</p>
+        </div>
+        <div class="letter-content">
+          <div class="letter-inner">
+            <h3>Meu Amor Eterno</h3>
+            <p class="typewriter-text">Desde o primeiro dia em que te vi, soube que você era especial. Há algo em você que ilumina tudo ao redor — seu sorriso, seu jeito de ser, a forma como você olha para o mundo com tanta leveza e amor. Você transformou a minha vida de uma maneira que eu nunca imaginei ser possível...</p>
+            <div class="letter-signature">Com todo o meu amor ❤️</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="envelope-wrap">
+      <div class="envelope" onclick="openEnvelope(this)">
+        <div class="envelope-flap"></div>
+        <div class="envelope-body">
+          <div class="envelope-heart"><i class="fas fa-heart"></i></div>
+          <p class="envelope-hint">Clique para abrir</p>
+        </div>
+        <div class="letter-content">
+          <div class="letter-inner">
+            <h3>Para os Dias Difíceis</h3>
+            <p class="typewriter-text">Nos dias em que tudo parece pesado, quando o mundo parece grande demais e você parece pequena demais... lembre-se: você é a coisa mais forte e mais linda que eu já conheci. E eu estarei sempre aqui, do seu lado, segurando a sua mão.</p>
+            <div class="letter-signature">Sempre com você 🌹</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="envelope-wrap">
+      <div class="envelope" onclick="openEnvelope(this)">
+        <div class="envelope-flap"></div>
+        <div class="envelope-body">
+          <div class="envelope-heart"><i class="fas fa-heart"></i></div>
+          <p class="envelope-hint">Clique para abrir</p>
+        </div>
+        <div class="letter-content">
+          <div class="letter-inner">
+            <h3>Sobre o Nosso Futuro</h3>
+            <p class="typewriter-text">Quando imagino o futuro, você está em cada cena. Nas manhãs de domingo com café, nas viagens ainda por vir, nas gargalhadas que ainda vamos dar juntos. Quero construir cada momento, cada memória, cada sonho — ao seu lado, para sempre.</p>
+            <div class="letter-signature">Eternamente seu 💫</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ═══════════════════════ PLAYLIST ═══════════════════════ -->
+<section id="playlist" class="section hidden">
+
+    <div class="section-header">
+        <h2 class="section-title">Playlist do Nosso Amor</h2>
+        <p class="section-sub">
+            As músicas que contam nossa história
+        </p>
+    </div>
+
+    <div class="player-wrap reveal">
+
+        <div class="player glass">
+
+            <div class="player-art">
+                <div class="player-art-inner" id="playerArtInner">
+
+                    <div class="player-vinyl" id="playerVinyl">
+                        <div class="vinyl-center"></div>
+                    </div>
+
+                    <div class="player-track-art">♫</div>
+
+                </div>
+            </div>
+
+            <div class="player-info">
+
+                <div class="player-song" id="playerSong">
+                    Chuva de Arroz - Luan Santana
+                </div>
+
+                <div class="player-artist" id="playerArtist">
+                    Um Beijo - Luan Santana
+                </div>
+
+            </div>
+
+            <div class="player-progress-wrap">
+
+                <div class="player-progress" id="playerProgress">
+
+                    <div class="progress-fill"
+                         id="progressFill"></div>
+
+                    <div class="progress-dot"
+                         id="progressDot"></div>
+
+                </div>
+
+                <div class="player-times">
+                    <span id="currentTime">0:00</span>
+                    <span id="playerDuration">0:00</span>
+                </div>
+
+            </div>
+
+            <div class="player-controls">
+
+                <button class="ctrl-btn"
+                        onclick="prevTrack()">
+                    <i class="fas fa-backward"></i>
+                </button>
+
+                <button class="ctrl-btn ctrl-play"
+                        onclick="togglePlay()">
+
+                    <i class="fas fa-play"
+                       id="playIcon"></i>
+
+                </button>
+
+                <button class="ctrl-btn"
+                        onclick="nextTrack()">
+                    <i class="fas fa-forward"></i>
+                </button>
+
+            </div>
+
+            <div class="player-volume">
+
+                <i class="fas fa-volume-up"></i>
+
+                <input
+                    type="range"
+                    id="volumeControl"
+                    min="0"
+                    max="1"
+                    step="0.05"
+                    value="0.7"
+                    oninput="setVolume(this.value)"
+                >
+
+            </div>
+
+        </div>
+
+        <div class="track-list glass">
+
+            <div class="track-item active"
+                 onclick="playTrack(0)">
+
+                <span class="track-num">01</span>
+
+                <div class="track-info">
+                    <div class="track-name">Chuva de Arroz</div>
+                    <div class="track-art-name">
+                        Luan Santana
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="track-item"
+                 onclick="playTrack(1)">
+
+                <span class="track-num">02</span>
+
+                <div class="track-info">
+                    <div class="track-name">
+                        Um Beijo 
+                    </div>
+                    <div class="track-art-name">
+                        Luan Santana
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="track-item"
+                 onclick="playTrack(2)">
+
+                <span class="track-num">03</span>
+
+                <div class="track-info">
+                    <div class="track-name">
+                        Stateside
+                    </div>
+                    <div class="track-art-name">
+                        PinkPantheress
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="track-item"
+                 onclick="playTrack(3)">
+
+                <span class="track-num">04</span>
+
+                <div class="track-info">
+                    <div class="track-name">
+                        Tonight
+                    </div>
+                    <div class="track-art-name">
+                        PinkPantheress
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="track-item"
+                 onclick="playTrack(4)">
+
+                <span class="track-num">05</span>
+
+                <div class="track-info">
+                    <div class="track-name">
+                        Oque Falta em Você sou Eu
+                    </div>
+                    <div class="track-art-name">
+                        Marilia Mendonça
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- O JS PRECISA DESTE ELEMENTO -->
+    <audio id="audioPlayer" preload="metadata"></audio>
+
+</section>
+
+<!-- ═══════════════════════ QUIZ DO CASAL ═══════════════════════ -->
+<section id="quiz" class="section hidden">
+
+    <div class="section-header">
+        <h2 class="section-title">Quiz do Casal ❤️</h2>
+        <p class="section-sub">
+            Quanto você conhece a nossa história?
+        </p>
+    </div>
+
+    <div class="quiz-wrap reveal" id="quizWrap">
+
+        <div class="quiz-card glass" id="quizCard">
+
+            <div class="quiz-progress-bar">
+                <div
+                    class="quiz-progress-fill"
+                    id="quizProgressFill">
+                </div>
+            </div>
+
+            <div class="quiz-question-num" id="quizNum">
+                Pergunta 1 de 5
+            </div>
+
+            <h3 class="quiz-question" id="quizQuestion">
+                Carregando pergunta...
+            </h3>
+
+            <div class="quiz-options" id="quizOptions">
+                <!-- As opções serão inseridas pelo JavaScript -->
+            </div>
+
+        </div>
+
+        <div class="quiz-result hidden" id="quizResult">
+
+            <div class="quiz-result-inner glass">
+
+                <div class="quiz-score-circle">
+                    <span id="quizScore">0</span>/5
+                </div>
+
+                <h3 id="quizResultMsg">
+                    Resultado
+                </h3>
+
+                <div class="quiz-confetti" id="quizConfetti"></div>
+
+                <button
+                    class="btn-restart"
+                    onclick="restartQuiz()">
+
+                    Jogar Novamente ✨
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+
+
+<!-- ═══════════════════════ MOTIVOS ═══════════════════════ -->
+<section id="reasons" class="section hidden">
+  <div class="section-header">
+    <h2 class="section-title">100 Motivos Pelos Quais Te Amo</h2>
+    <p class="section-sub">E existem infinitos mais...</p>
+  </div>
+  <div class="reasons-grid reveal" id="reasonsGrid"></div>
+</section>
+
+<!-- ═══════════════════════ CÁPSULA DO TEMPO ═══════════════════════ -->
+<section id="capsule" class="section hidden">
+  <div class="section-header">
+    <h2 class="section-title">Cápsula do Tempo</h2>
+    <p class="section-sub">Mensagens para o futuro</p>
+  </div>
+  <div class="capsule-wrap reveal">
+    <div class="capsule-form glass">
+      <div class="capsule-lock" id="capsuleLock">
+        <i class="fas fa-lock" id="lockIcon"></i>
+      </div>
+      <h3>Escrever para o Futuro</h3>
+      <textarea id="capsuleMsg" placeholder="Escreva uma mensagem para o futuro..." rows="5"></textarea>
+      <label>Abrir em:</label>
+      <input type="date" id="capsuleDate" />
+      <button class="btn-seal" onclick="sealCapsule()">
+        <i class="fas fa-lock"></i> Selar Cápsula
+      </button>
+    </div>
+    <div class="capsule-list glass" id="capsuleList">
+      <h3>Cápsulas Seladas</h3>
+      <div id="capsuleItems"><p class="empty-msg">Nenhuma cápsula ainda...</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════ ÁRVORE DO AMOR ═══════════════════════ -->
+<section id="tree" class="section hidden">
+  <div class="section-header">
+    <h2 class="section-title">Árvore do Amor</h2>
+    <p class="section-sub">Cada folha, uma memória</p>
+  </div>
+  <div class="tree-wrap reveal">
+    <svg class="love-tree" viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg" id="loveTree">
+      <!-- Trunk -->
+      <path d="M250 450 Q245 380 240 320 Q238 280 250 240" stroke="#8B4513" stroke-width="14" fill="none" stroke-linecap="round"/>
+      <path d="M250 450 Q255 380 260 320 Q262 280 250 240" stroke="#A0522D" stroke-width="10" fill="none" stroke-linecap="round"/>
+      <!-- Branches -->
+      <path d="M245 350 Q200 320 170 290" stroke="#8B4513" stroke-width="7" fill="none" stroke-linecap="round"/>
+      <path d="M248 300 Q210 260 185 230" stroke="#8B4513" stroke-width="6" fill="none" stroke-linecap="round"/>
+      <path d="M252 330 Q295 300 320 275" stroke="#8B4513" stroke-width="7" fill="none" stroke-linecap="round"/>
+      <path d="M250 280 Q295 245 315 215" stroke="#8B4513" stroke-width="5" fill="none" stroke-linecap="round"/>
+      <path d="M250 240 Q235 200 225 170" stroke="#8B4513" stroke-width="8" fill="none" stroke-linecap="round"/>
+    </svg>
+    <div class="tree-leaves" id="treeLeaves"></div>
+  </div>
+</section>
+
+<!-- ═══════════════════════ MENSAGEM SURPRESA ═══════════════════════ -->
+<section id="surprise" class="section hidden">
+  <div class="surprise-wrap">
+    <div class="surprise-content glass reveal">
+      <div class="surprise-icon">💌</div>
+      <h2>Uma Mensagem Especial</h2>
+      <p>Abra apenas quando precisar lembrar o quanto é amada</p>
+      <button class="btn-surprise" id="btnSurprise" onclick="openSurprise()">
+        <i class="fas fa-heart"></i> Abrir a Mensagem ❤️
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════ PEDIDO ESPECIAL ═══════════════════════ -->
+<section id="proposal" class="section hidden">
+  <div class="proposal-bg">
+    <div class="proposal-content">
+      <div class="proposal-img-wrap reveal">
+        <img src="https://images.unsplash.com/photo-1518199266791-5375a83190b7?w=500&q=80" alt="Nós dois" class="proposal-img"/>
+        <div class="proposal-img-ring"></div>
+      </div>
+      <div class="proposal-text reveal">
+        <h2 class="proposal-title">Você é o amor da minha vida</h2>
+        <p class="proposal-desc">
+          Desde o primeiro momento em que entrou na minha vida, tudo ficou mais colorido, mais bonito, mais cheio de sentido. Você é meu lar, minha paz, minha maior aventura.
+        </p>
+        <p class="proposal-question">Você aceita viver infinitas aventuras comigo?</p>
+        <div class="proposal-btns">
+          <button class="btn-yes" id="btnYes" onclick="sayYes()">
+            <i class="fas fa-heart"></i> Sim, para sempre!
+          </button>
+          <button class="btn-no" id="btnNo" onmouseover="runAway(this)" ontouchstart="runAway(this)">
+            Não
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════ MODAIS ═══════════════════════ -->
+<div class="modal-overlay" id="modalOverlay" onclick="closeModal()">
+  <div class="modal glass" id="modalContent" onclick="event.stopPropagation()">
+    <button class="modal-close" onclick="closeModal()"><i class="fas fa-times"></i></button>
+    <div id="modalBody"></div>
+  </div>
+</div>
+
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox" onclick="closeLightbox()">
+  <img id="lightboxImg" src="" alt=""/>
+  <button class="lightbox-close" onclick="closeLightbox()"><i class="fas fa-times"></i></button>
+  <button class="lightbox-prev" onclick="lightboxNav(-1, event)"><i class="fas fa-chevron-left"></i></button>
+  <button class="lightbox-next" onclick="lightboxNav(1, event)"><i class="fas fa-chevron-right"></i></button>
+</div>
+
+<!-- MENSAGEM SURPRESA MODAL -->
+<div class="surprise-modal" id="surpriseModal">
+  <div class="surprise-modal-inner glass">
+    <div class="surprise-hearts" id="surpriseHearts"></div>
+    <h2>Para Você, Meu Amor 💌</h2>
+    <div class="surprise-letter">
+      <p>Existe algo que preciso que você saiba: você é absolutamente extraordinária.</p>
+      <p>Nos seus dias de dúvida, lembre-se: eu te escolho todos os dias. Não por obrigação, mas porque você é a melhor pessoa que já passou pela minha vida.</p>
+      <p>Você é amada de um jeito que vai além das palavras, além do tempo, além de qualquer distância.</p>
+      <p>Eu te amo. Ontem, hoje, amanhã e em cada segundo que existir entre esses momentos.</p>
+    </div>
+    <button class="btn-close-surprise" onclick="closeSurpriseModal()">Fechar com amor ❤️</button>
+  </div>
+</div>
+
+<!-- CELEBRAÇÃO YES -->
+<div class="celebration" id="celebration" style="display:none">
+  <div class="celebration-content glass">
+    <div class="celebration-hearts" id="celebrationHearts"></div>
+    <h1>❤️ Sim! ❤️</h1>
+    <p>"Você é e sempre será o amor da minha vida ❤️"</p>
+    <button onclick="document.getElementById('celebration').style.display='none'">Fechar ✨</button>
+  </div>
+</div>
+  
+
+<audio id="audioPlayer"></audio>
+
+<script src="script.js"></script>
+</body>
+</html>
+
+
+
